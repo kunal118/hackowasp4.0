@@ -68,6 +68,7 @@
     border-color: black;
     border-radius: 8px;
     font-size: 1.2rem;
+    border-width:  2px;
 }
 
 .blogSubmit textarea::placeholder{
@@ -78,7 +79,6 @@
 
 .blogSubmit input[type=text]{
     border-radius: 8px;
-    box-shadow: none;
     border-color: black;
     font-size: 1.5rem;
     text-align: center;
@@ -183,3 +183,38 @@ button{
     margin-top: 20px;
 }
 
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.2rem;
+}
+
+.login button{
+    margin: 40px;
+}
+
+.login form input[type=text]{
+    margin-bottom: 40px;
+}
+
+.login a{
+    text-decoration: none;
+    color: #84ce40;
+    transition: .4s;
+    font-weight: 400;
+}
+
+.login a:hover{
+    color: #5abaab;
+}
