@@ -163,7 +163,10 @@ app.get("/blog/:customName",function(req,res){
     });
 });
 
-
+app.get("/logout",function(req,res){
+    signedIn = false;
+    res.redirect("/");
+});
 
 app.listen(3000,function(err)
 {
