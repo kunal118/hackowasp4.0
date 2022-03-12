@@ -5,6 +5,7 @@ const path = require('path');
 const multer = require('multer');
 var fs = require('fs');
 var Grid = require('gridfs-stream');
+const { log } = require('console');
 Grid.mongo = mongoose.mongo;
 
 const app = express();
@@ -37,6 +38,7 @@ const tuteSchema = {
     name:String
 }
 const Tute = mongoose.model('Tute',tuteSchema);
+
 
 app.get("/",function(req,res){
     res.render("home");
@@ -96,20 +98,6 @@ app.get("/blog/:customName",function(req,res){
     Blog.findOne({_id:blogId},function(err,result){
         if(!err){
             res.render("post",{oneTitle:result.title,oneContent:result.content});
-        }
-    });
-});
-
-app.get("/guide/:name",function(req,res){
-
-    const pdfName = req.params.name;
-
-    
-
-    Tute.findOne({_id:pdfName},function(err,result){
-        if(!err){
-            console.log(res);
-        res.render("guide",{title:result.title});
         }
     });
 });

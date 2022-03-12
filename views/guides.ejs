@@ -10,11 +10,43 @@
 </form>
 </div>
 
-
+<div class="object">
   <% records.forEach(function(pdfFile){ %>
+   <div class="single">
     <div class="tutesName">
-        <a href="/guide/<%=pdfFile._id%>"><h1><%=pdfFile.name%></h1></a>
+      <h1>Topic: <%=pdfFile.name%></h1>
+      <button class="btn btn-primary" name="press" value="<%=pdfFile.title%>" onclick="buttonAct(event)">Open</button>
+        
+    </div>
+    <div class="pdfInput" name="<%=pdfFile.title%>" style="display: none;">
+      <object
+        data='Uploads/<%=pdfFile.title%>'
+        type="application/pdf"
+        width="500"
+        height="678"
+      >
+  
+        <iframe
+          src='Uploads/<%=pdfFile.title%>'
+          width="500"
+          height="678"
+        >
+        <p>This browser does not support PDF!</p>
+        </iframe>
+      </object>
+    </div>
     </div>
   <% }); %>
+</div>
+<script>
+  const buttonAct = (event) =>{
+    if($('button[name]') == event.target.value)
+    {
+
+    }
+
+}
+</script>
+
 
 <%- include("partials/footer") -%>

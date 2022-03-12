@@ -163,4 +163,23 @@ button{
     justify-content: center;
 }
 
+.object{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "Poppins",sans-serif;
+    padding:40px 140px;
+}
+
+.single{
+    box-sizing: border-box;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.pdfInput{
+    margin-top: 20px;
+}
 
