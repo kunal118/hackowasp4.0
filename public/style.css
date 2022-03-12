@@ -201,11 +201,10 @@ button{
 }
 
 .login button{
-    margin: 40px;
-}
-
-.login form input[type=text]{
+    margin: auto;
+    margin-top: 40px;
     margin-bottom: 40px;
+    width: 5vw;
 }
 
 .login a{
@@ -216,5 +215,39 @@ button{
 }
 
 .login a:hover{
+    color: #5abaab;
+}
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.signup form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.2rem;
+}
+
+.signup button{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 5vw;
+}
+
+.signup a{
+    text-decoration: none;
+    color: #84ce40;
+    transition: .4s;
+    font-weight: 400;
+}
+
+.signup a:hover{
     color: #5abaab;
 }

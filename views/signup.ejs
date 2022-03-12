@@ -1,11 +1,13 @@
 <%- include("partials/header") -%>
-
+<div class="signup">
 <form action="/signup" method="post">
     <label for="signup">Username</label>
-    <input id="signup" type="email" name="username">
-    <label for="pass">Username</label>
-    <input id="pass" type="password" name="pass">
+    <input id="signup" type="email" name="username" style="margin-bottom: 30px;">
+    <label for="pass">Password</label>
+    <input id="pass" type="password" name="pass" style="margin-bottom: 30px;">
     <button class="btn btn-primary" type="submit">Signup</button>
+    <a href="/">Already have an account?SignIn</a>
 </form>
+</div>
 
 <%- include("partials/footer") -%>
