@@ -187,9 +187,13 @@ button{
 .login{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top: 20vh;
+    box-sizing: border-box;
+    width: 20vw;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
+    justify-content: center;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 .login form{
@@ -218,12 +222,22 @@ button{
     color: #5abaab;
 }
 
+.containerLogin{
+    display: flex;
+    justify-content: center;
+    padding-top: 25vh;
+}
+
 .signup{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top: 20vh;
+    box-sizing: border-box;
+    width: 20vw;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
+    justify-content: center;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 .signup form{
@@ -250,4 +264,10 @@ button{
 
 .signup a:hover{
     color: #5abaab;
+}
+
+.containerSign{
+    display: flex;
+    justify-content: center;
+    padding-top: 25vh;
 }
