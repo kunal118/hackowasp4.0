@@ -1,12 +1,33 @@
 <%- include("partials/header") -%>
 
-
-<div class="home">
-    <h1>Hello</h1>
+<div class="fileSubmit">
+<form action="/guides" method="post" enctype='multipart/form-data'>
+    <h1>Add a Guide</h1>
+    <label for="file-upload" style="display: block;">+</label>
+    <input id="file-upload" type="file" name="fileName" accept=".pdf" style="display: none;"/>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
 </div>
 
 
-
-
+  <% records.forEach(function(file){ %>
+    <div class="tutes">
+        <object
+          data='Uploads/<%=file.title%>'
+          type="application/pdf"
+          width="500"
+          height="678"
+        >
+  
+          <iframe
+            src='Uploads/<%=file%>'
+            width="500"
+            height="678"
+          >
+          <p>This browser does not support PDF!</p>
+          </iframe>
+        </object>
+      </div>
+  <% }); %>
 
 <%- include("partials/footer") -%>

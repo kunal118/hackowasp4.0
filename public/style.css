@@ -25,6 +25,11 @@
     margin: 20px;
     font-size: 1.5rem;
     color: black;
+    transition: .4s;
+}
+
+.links a:hover{
+    color: #84ce40;
 }
 
 .home{
@@ -36,10 +41,21 @@
     justify-content: center;
 }
 
+.main{
+    display: flex;
+    justify-content: center;
+}
+
 .blogSubmit{
     display: flex;
     justify-content: center;
     text-align: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 40vw;
+    margin-bottom: 50px;
+    font-family: "Poppins",sans-serif;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
 }
 
 .blogSubmit form{
@@ -49,6 +65,23 @@
 .blogSubmit textarea{
     display: block;
     margin-bottom: 40px;
+    border-color: black;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.blogSubmit textarea::placeholder{
+    position: relative;
+    top: 40px;
+}
+
+
+.blogSubmit input[type=text]{
+    border-radius: 8px;
+    box-shadow: none;
+    border-color: black;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 button{
@@ -61,8 +94,73 @@ button{
     flex-direction: column;
     font-family: "Poppins",sans-serif;
     margin-left: 160px;
+    box-sizing: border-box;
+    width: 80vw;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 16px;
 }
 
 .blog h1{
     display: block;
+    margin: unset;
 }
+
+.blog a{
+    text-decoration: none;
+    color: #84ce40;
+    margin-left: 8px;
+}
+
+.blog a:hover{
+    color: #5abaab;
+}
+
+.guide{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tute{
+    box-sizing: border-box;
+    border: 10px;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
+}
+
+.fileSubmit{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+    box-shadow: 12px 10px 10px 4px rgba(	0,0, 0,.34);
+    width: 30vw;
+    padding: 25px;
+    margin: auto;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.fileSubmit label{
+    font-family: "Poppins",sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 4vw;
+    color: aliceblue;
+    margin: auto;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right,#84ce40,#5abaab);
+}
+
+.tutes{
+    display: flex;
+    justify-content: center;
+}
+
+
