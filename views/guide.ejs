@@ -1,0 +1,29 @@
+<%- include("partials/header") -%>
+
+<div>
+    <object
+      data='./Uploads/<%=title%>'
+      type="application/pdf"
+      width="500"
+      height="678"
+    >
+
+      <iframe
+        src='./Uploads/<%=title%>'
+        width="500"
+        height="678"
+      >
+      <p>This browser does not support PDF!</p>
+      </iframe>
+    </object>
+  </div>
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer") -%>

@@ -5,29 +5,16 @@
     <h1>Add a Guide</h1>
     <label for="file-upload" style="display: block;">+</label>
     <input id="file-upload" type="file" name="fileName" accept=".pdf" style="display: none;"/>
+    <input type="text" name="tuteTitle">
     <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 </div>
 
 
-  <% records.forEach(function(file){ %>
-    <div class="tutes">
-        <object
-          data='Uploads/<%=file.title%>'
-          type="application/pdf"
-          width="500"
-          height="678"
-        >
-  
-          <iframe
-            src='Uploads/<%=file%>'
-            width="500"
-            height="678"
-          >
-          <p>This browser does not support PDF!</p>
-          </iframe>
-        </object>
-      </div>
+  <% records.forEach(function(pdfFile){ %>
+    <div class="tutesName">
+        <a href="/guide/<%=pdfFile._id%>"><h1><%=pdfFile.name%></h1></a>
+    </div>
   <% }); %>
 
 <%- include("partials/footer") -%>
