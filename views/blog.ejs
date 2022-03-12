@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+
+<div class="blogSubmit">
+ <form action="/blog" method="post">
+    <input type="text" name="title" placeholder="Title" style="margin-bottom: 40px; width: 25vw;" >
+    <textarea name="newBlog" rows="4" cols="50" style="resize: none;width: 25vw;" placeholder="Blog"></textarea>
+     <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+
+<% blogs.forEach(function(blog){ %>
+    <div class="blog">
+        <h1><%= blog.title%></h1>
+        <p><%=blog.content.substring(0,100)%><a href="/blog/<%=blog._id%>">Read More</a></p>
+    </div>
+<% }); %>
+
+<%- include("partials/footer") -%>

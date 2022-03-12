@@ -1,0 +1,68 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter:blur(16px);
+    z-index: +5;
+    padding:20px 140px;
+}
+
+.navbar img{
+    width: 30vh;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins',sans-serif;
+    font-weight:400 ;
+}
+
+.links a{
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.home{
+    background-color: #778899;
+    display: flex;
+    align-items: center;
+    margin: unset;
+    height: 88vh;
+    justify-content: center;
+}
+
+.blogSubmit{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogSubmit form{
+    margin: 50px;
+}
+
+.blogSubmit textarea{
+    display: block;
+    margin-bottom: 40px;
+}
+
+button{
+    background-image:linear-gradient(to right,#84ce40,#5abaab) ;
+    border-color: white;
+}
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins",sans-serif;
+    margin-left: 160px;
+}
+
+.blog h1{
+    display: block;
+}
