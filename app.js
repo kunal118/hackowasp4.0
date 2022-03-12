@@ -33,7 +33,8 @@ const blogSchema = {
 const Blog = mongoose.model('Blog',blogSchema);
 
 const tuteSchema = {
-    title: String
+    title: String,
+    name:String
 }
 const Tute = mongoose.model('Tute',tuteSchema);
 
@@ -66,13 +67,13 @@ app.get("/guides",function(req,res){
 
 app.post("/guides",upload,function(req,res){
     const titleName = req.file.filename;
+    const tuteName =  req.body.tuteTitle;
     let success = req.file.filename+" Uploaded successfully";
-    console.log(success);
     const newPdf = new Tute({
-        title:titleName
+        title:titleName,
+        name:tuteName
     });
     newPdf.save();
-    console.log(success);
     res.redirect("/guides");
 });
 
@@ -94,8 +95,21 @@ app.get("/blog/:customName",function(req,res){
 
     Blog.findOne({_id:blogId},function(err,result){
         if(!err){
-            console.log(result.title);
             res.render("post",{oneTitle:result.title,oneContent:result.content});
+        }
+    });
+});
+
+app.get("/guide/:name",function(req,res){
+
+    const pdfName = req.params.name;
+
+    
+
+    Tute.findOne({_id:pdfName},function(err,result){
+        if(!err){
+            console.log(res);
+        res.render("guide",{title:result.title});
         }
     });
 });
